@@ -3,7 +3,7 @@
     <head>
         <title> HTML Basics DEMO</title>
         <style>
-            .header{
+            /*.header{
                 display: grid;
                 grid-template-columns: 1fr
                 1fr;
@@ -21,6 +21,23 @@
                 background-color: lightgreen;
                 text-align:center;
                 grid-area: item2;
+            }*/
+
+            .header{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1vw;
+                background-color: darkgreen;
+                color: white;
+            }
+
+            .item1{
+                flex: 0 0 auto;
+            }
+
+            .item2{
+                flex: 0 0 auto;
             }
 
             body {
@@ -43,21 +60,27 @@
 
             @media(max-width:400px){
                 body{
-                    background-color:red;
+                    background-color: red;
                 }
+
+
+            .header{
+                flex-direction: column;
+                align-items: center;
             }
+        }
 
         </style>
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
-        <div class = "Header">
-            <h1 style = "color:blue; text-align:center;">Welcome to <span id = "highlight">HTML!</span></h1>
+        <div class ="header">
+            <!-- <h1 style = "color:blue; text-align:center;">Welcome to <span id = "highlight">HTML!</span></h1> -->
         <div class ="item1">
-            <h1>Item 1 </h1>
+            <h1>HTML</h1>
         </div>
         <div class="item2">
-            <h1>Item 2</h1>
+            <h1>CSS</h1>
         </div>
         </div>
         <p>This is a paragraph element. <b>HTML</b> uses tags to mark up content.</p>
